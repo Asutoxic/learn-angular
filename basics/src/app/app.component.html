@@ -1,0 +1,43 @@
+<p *ngIf="blueClass">Button is blue.</p>
+
+<button
+  (click)="blueClass = !blueClass"
+  [ngClass]="{ blue: blueClass }"
+  [ngStyle]="{ 'font-size.px': fontSize }"
+>
+  Change
+</button>
+
+<hr />
+
+{{ name | uppercase }}
+
+<p>{{ user.name | uppercase }}</p>
+<p>{{ user.age }}</p>
+
+<input type="text" [value]="user.name" />
+
+<button type="button" (click)="handler($event)">Click me!</button>
+
+<br />
+<br />
+
+<input type="text" [ngModel]="name" (ngModelChange)="name = $event" />
+
+<app-post
+  *ngFor="let image of images; let i = index"
+  [img]="image"
+  (imgSelected)="logImg($event)"
+>
+  <p>{{ i }}Some Caption</p>
+</app-post>
+
+<!-- <input (keyup)="changeImage($event)" [value]="imgURL" /> -->
+
+<p>{{ currentDate | date : "dd/MM/yyyy" }}</p>
+
+<p>{{ cost | currency : "VND" }}</p>
+
+<p>{{ temperature | number : "1.4-10" }}</p>
+
+<pre>{{ pizza | json }}</pre>
