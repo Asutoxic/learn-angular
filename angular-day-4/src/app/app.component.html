@@ -1,0 +1,31 @@
+<app-hello *ngIf="user.age >= 18" [name]="user.name"></app-hello>
+
+<div *ngIf="user.age < 18">You are too young to see this content</div>
+
+<!-- or -->
+
+<app-hello *ngIf="user.age >= 18; else under18" [name]="user.name"></app-hello>
+
+<ng-template #under18>
+  <div>You are too young to see this content</div>
+</ng-template>
+
+<!-- cú pháp trên là ngắn gọn của cái này -->
+
+<ng-template [ngIf]="user.age >= 18" [ngIfElse]="under18"> </ng-template>
+
+<app-hello *ngIf="user.age >= 18" [name]="user.name"></app-hello>
+
+<ng-template #under18>
+  <div>You are too young to see this content</div>
+</ng-template>
+
+<!-- hidden -->
+
+<app-hello [hidden]="user.age < 18" [name]="user.name"></app-hello>
+
+<div [hidden]="user.age >= 18">You are too young to see this content</div>
+
+<button (click)="user.age = user.age - 1">-</button>
+Age: {{ user.age }}
+<button (click)="user.age = user.age + 1">+</button>
