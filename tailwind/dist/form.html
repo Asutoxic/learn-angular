@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="form.js"></script>
+  </head>
+  <body>
+    <section class="bg-white h-screen mt-10">
+      <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-sm">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center">
+          Contact Us
+        </h2>
+        <p
+          class="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl"
+        >
+          Aliquip deserunt eu et irure sint excepteur pariatur nisi
+          reprehenderit ut.
+        </p>
+        <form
+          id="form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="space-y-8"
+        >
+          <!--Validation-->
+          <input
+            type="hidden"
+            name="access_key"
+            value="6e82cf89-0c19-47cf-8272-3d881cbe074c"
+          />
+          <input
+            type="hidden"
+            name="subject"
+            value="New Submission from Your Website"
+          />
+          <div>
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-gray-900"
+              >Your email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="name@gmail.com"
+              class="shodow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="subject"
+              class="block mb-2 text-sm font-medium text-gray-900"
+              >Subject</label
+            >
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Let us know how we can help"
+              class="shodow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              required
+            />
+          </div>
+          <div class="sm:col-span-2">
+            <label
+              for="message"
+              class="block mb-2 text-sm font-mediun text-gray-900"
+              >Your mesage</label
+            >
+            <textarea
+              name="message"
+              id="message"
+              rows="6"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-bule-500 focus:bordr-blue-500"
+              placeholder="Leave a comment..."
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-700 sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+          >
+            Send message
+          </button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
