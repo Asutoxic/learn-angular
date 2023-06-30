@@ -1,0 +1,15 @@
+<h1>Angular sample project for Angular 100 Days of Code</h1>
+<h2>Day 13: Content Projection in Angular</h2>
+<br />
+
+<app-toggle [(checked)]="question.question1">
+  <h3 class="header">Header 1</h3>
+  <label>Question 1</label>
+  <p>content 1</p>
+</app-toggle>
+<app-toggle [(checked)]="question.question2">
+  <h3 class="header">Header 2</h3>
+  <ng-container ngProjectAs="label"><span>Question 2</span><button>some button</button></ng-container>
+  <p>content 2</p>
+  <button>skip</button>
+</app-toggle>

@@ -1,0 +1,20 @@
+<app-hello name="{{ name }}"></app-hello>
+<p>Start editing to see some magic happen :)</p>
+<input #nameInput [(ngModel)]="name" [style.margin-bottom]="'10px'" />
+<br />
+<input
+  [ngModel]="name"
+  (ngModelChange)="name = $event"
+  [style.margin-bottom]="'50px'"
+/>
+<br />
+
+<!-- toggleComp là instance của ToggleComponent -->
+
+<!-- <app-toggle #toggleComp [(checked)]="isChecked"></app-toggle> -->
+<!-- <button (click)="toggleComp.toggle()">Toggle me</button> -->
+<app-toggle [(checked)]="isChecked"></app-toggle>
+<app-toggle [(checked)]="isChecked"></app-toggle>
+<app-toggle [(checked)]="isChecked"></app-toggle>
+<app-toggle [(checked)]="isChecked"></app-toggle>
+<button #toggleButton>Toggle me</button>

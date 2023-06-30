@@ -1,0 +1,8 @@
+th,
+td {
+  @apply text-center py-2 border border-gray-200;
+}
+
+td > button {
+  @apply px-2 py-1 rounded-md text-white transition-all;
+}
